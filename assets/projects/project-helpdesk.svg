@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="50%" stop-color="#121824"/>
+      <stop offset="100%" stop-color="#07090e"/>
+    </linearGradient>
+    <linearGradient id="hd-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161f2e" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0e1420" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="orange-badge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="hd-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#hd-bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.07" stroke="#334b6b" stroke-width="1">
+    <path d="M0 120 H1920 M0 240 H1920 M0 360 H1920 M0 480 H1920 M0 600 H1920 M0 720 H1920 M0 840 H1920 M0 960 H1920"/>
+    <path d="M240 0 V1080 M480 0 V1080 M720 0 V1080 M960 0 V1080 M1200 0 V1080 M1440 0 V1080 M1680 0 V1080"/>
+  </g>
+
+  <!-- Ambient light -->
+  <circle cx="960" cy="500" r="450" fill="#f97316" opacity="0.06" filter="url(#hd-glow)"/>
+
+  <!-- Top Bar -->
+  <rect x="100" y="60" width="1720" height="70" rx="16" fill="url(#hd-card)" stroke="#26344d" stroke-width="1.5"/>
+  <rect x="130" y="80" width="30" height="30" rx="6" fill="#f97316"/>
+  <path d="M137 95 L144 102 L153 88" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="175" y="103" fill="#ffffff" font-family="'Segoe UI', Inter, sans-serif" font-size="20" font-weight="700">Enterprise Help Desk &amp; Issue Tracking System</text>
+  <text x="1480" y="103" fill="#94a3b8" font-family="'Segoe UI', Inter, sans-serif" font-size="14">Power Apps &bull; Automate &bull; SharePoint</text>
+
+  <!-- Pipeline Header Columns -->
+  <!-- Column 1: New Submissions (350w) -->
+  <rect x="100" y="160" width="395" height="850" rx="16" fill="url(#hd-card)" stroke="#26344d" stroke-width="1.5"/>
+  <rect x="125" y="185" width="10" height="10" rx="2" fill="#38bdf8"/>
+  <text x="145" y="195" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">INCOMING TICKETS (14)</text>
+  
+  <!-- Ticket 1 -->
+  <rect x="125" y="225" width="345" height="180" rx="12" fill="#1b2537" stroke="#334460" stroke-width="1"/>
+  <rect x="145" y="245" width="65" height="24" rx="6" fill="#ef4444" fill-opacity="0.2"/>
+  <text x="156" y="261" fill="#f87171" font-size="11" font-weight="700" font-family="sans-serif">P1 &bull; CRITICAL</text>
+  <text x="350" y="261" fill="#94a3b8" font-size="11" font-family="sans-serif">#TKT-8902</text>
+  <text x="145" y="295" fill="#ffffff" font-size="14" font-weight="600" font-family="sans-serif">ERP Gateway Connector Timeout</text>
+  <text x="145" y="320" fill="#94a3b8" font-size="12" font-family="sans-serif">SharePoint list payload sync failing for finance unit</text>
+  <rect x="145" y="350" width="22" height="22" rx="11" fill="#ea580c"/>
+  <text x="152" y="365" fill="#fff" font-size="10" font-weight="700" font-family="sans-serif">M</text>
+  <text x="175" y="365" fill="#cbd5e1" font-size="11" font-family="sans-serif">Michael R. &bull; 12m ago</text>
+
+  <!-- Ticket 2 -->
+  <rect x="125" y="425" width="345" height="180" rx="12" fill="#1b2537" stroke="#334460" stroke-width="1"/>
+  <rect x="145" y="445" width="65" height="24" rx="6" fill="#f97316" fill-opacity="0.2"/>
+  <text x="156" y="461" fill="#fb923c" font-size="11" font-weight="700" font-family="sans-serif">P2 &bull; HIGH</text>
+  <text x="350" y="461" fill="#94a3b8" font-size="11" font-family="sans-serif">#TKT-8905</text>
+  <text x="145" y="495" fill="#ffffff" font-size="14" font-weight="600" font-family="sans-serif">Canvas App Delegable Filter Warning</text>
+  <text x="145" y="520" fill="#94a3b8" font-size="12" font-family="sans-serif">Large record gallery query limits to 2000 rows</text>
+  <rect x="145" y="550" width="22" height="22" rx="11" fill="#38bdf8"/>
+  <text x="153" y="565" fill="#fff" font-size="10" font-weight="700" font-family="sans-serif">K</text>
+  <text x="175" y="565" fill="#cbd5e1" font-size="11" font-family="sans-serif">Kavitha S. &bull; 45m ago</text>
+
+  <!-- Column 2: In Triage / Assigned -->
+  <rect x="540" y="160" width="395" height="850" rx="16" fill="url(#hd-card)" stroke="#26344d" stroke-width="1.5"/>
+  <rect x="565" y="185" width="10" height="10" rx="2" fill="#f59e0b"/>
+  <text x="585" y="195" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">IN TRIAGE &amp; ANALYSIS (8)</text>
+
+  <!-- Ticket in triage -->
+  <rect x="565" y="225" width="345" height="200" rx="12" fill="#1b2537" stroke="#f97316" stroke-width="1.5" filter="url(#hd-glow)"/>
+  <rect x="585" y="245" width="65" height="24" rx="6" fill="#f97316" fill-opacity="0.25"/>
+  <text x="596" y="261" fill="#fb923c" font-size="11" font-weight="700" font-family="sans-serif">P2 &bull; HIGH</text>
+  <text x="790" y="261" fill="#94a3b8" font-size="11" font-family="sans-serif">#TKT-8898</text>
+  <text x="585" y="295" fill="#ffffff" font-size="14" font-weight="700" font-family="sans-serif">Power Automate Flow Run Failure</text>
+  <text x="585" y="320" fill="#94a3b8" font-size="12" font-family="sans-serif">Condition logic evaluation returned null pointer</text>
+  <rect x="585" y="345" width="305" height="24" rx="6" fill="#0f172a"/>
+  <text x="595" y="361" fill="#fb923c" font-size="11" font-family="sans-serif">&bull; Auto-reassigned to L2 Power Platform Lead</text>
+  <text x="585" y="398" fill="#cbd5e1" font-size="11" font-family="sans-serif">Assigned to: Petchi P &bull; Active</text>
+
+  <!-- Column 3: Quality Testing & UAT -->
+  <rect x="980" y="160" width="395" height="850" rx="16" fill="url(#hd-card)" stroke="#26344d" stroke-width="1.5"/>
+  <rect x="1005" y="185" width="10" height="10" rx="2" fill="#a855f7"/>
+  <text x="1025" y="195" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">UAT VERIFICATION (5)</text>
+
+  <!-- Ticket 3 -->
+  <rect x="1005" y="225" width="345" height="180" rx="12" fill="#1b2537" stroke="#334460" stroke-width="1"/>
+  <rect x="1025" y="245" width="75" height="24" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="1035" y="261" fill="#34d399" font-size="11" font-weight="700" font-family="sans-serif">UAT PASS</text>
+  <text x="1230" y="261" fill="#94a3b8" font-size="11" font-family="sans-serif">#TKT-8861</text>
+  <text x="1025" y="295" fill="#ffffff" font-size="14" font-weight="600" font-family="sans-serif">Employee Master Validation Rule</text>
+  <text x="1025" y="320" fill="#94a3b8" font-size="12" font-family="sans-serif">Regex validation pattern verified on mobile app</text>
+  <text x="1025" y="365" fill="#cbd5e1" font-size="11" font-family="sans-serif">Sign-off received by QA Lead</text>
+
+  <!-- Column 4: Resolved & Closed -->
+  <rect x="1420" y="160" width="395" height="850" rx="16" fill="url(#hd-card)" stroke="#26344d" stroke-width="1.5"/>
+  <rect x="1445" y="185" width="10" height="10" rx="2" fill="#10b981"/>
+  <text x="1465" y="195" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">RESOLVED &amp; DEPLOYED (142)</text>
+
+  <!-- Ticket 4 -->
+  <rect x="1445" y="225" width="345" height="160" rx="12" fill="#1b2537" stroke="#334460" stroke-width="1"/>
+  <rect x="1465" y="245" width="75" height="24" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="1475" y="261" fill="#34d399" font-size="11" font-weight="700" font-family="sans-serif">DEPLOYED</text>
+  <text x="1670" y="261" fill="#94a3b8" font-size="11" font-family="sans-serif">#TKT-8820</text>
+  <text x="1465" y="295" fill="#ffffff" font-size="14" font-weight="600" font-family="sans-serif">Automated Teams Notification Flow</text>
+  <text x="1465" y="320" fill="#94a3b8" font-size="12" font-family="sans-serif">Adaptive Cards integrated into incident channels</text>
+  <text x="1465" y="355" fill="#34d399" font-size="11" font-family="sans-serif">&check; Production Release v2.4</text>
+</svg>

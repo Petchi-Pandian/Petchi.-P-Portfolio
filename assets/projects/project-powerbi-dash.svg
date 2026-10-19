@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="50%" stop-color="#111726"/>
+      <stop offset="100%" stop-color="#080a10"/>
+    </linearGradient>
+    <linearGradient id="orange-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff7a00"/>
+      <stop offset="100%" stop-color="#ffaa40"/>
+    </linearGradient>
+    <linearGradient id="area-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a00" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff7a00" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182030" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#101522" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg-grad)"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.08" stroke="#4a6b94" stroke-width="1">
+    <path d="M0 120 H1920 M0 240 H1920 M0 360 H1920 M0 480 H1920 M0 600 H1920 M0 720 H1920 M0 840 H1920 M0 960 H1920"/>
+    <path d="M240 0 V1080 M480 0 V1080 M720 0 V1080 M960 0 V1080 M1200 0 V1080 M1440 0 V1080 M1680 0 V1080"/>
+  </g>
+
+  <!-- Ambient light -->
+  <circle cx="1400" cy="350" r="380" fill="#ff6b00" opacity="0.08" filter="url(#glow)"/>
+  <circle cx="350" cy="700" r="300" fill="#0099ff" opacity="0.06" filter="url(#glow)"/>
+
+  <!-- Top App Bar -->
+  <rect x="100" y="60" width="1720" height="70" rx="16" fill="url(#card-grad)" stroke="#2a364f" stroke-width="1.5"/>
+  <rect x="130" y="78" width="34" height="34" rx="6" fill="#f59e0b"/>
+  <path d="M140 98 L140 90 M146 98 L146 84 M152 98 L152 87" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="180" y="102" fill="#ffffff" font-family="'Segoe UI', Inter, sans-serif" font-size="20" font-weight="700">Power BI &bull; Student Enrollment &amp; Analytics Dashboard</text>
+  <text x="1450" y="102" fill="#94a3b8" font-family="'Segoe UI', Inter, sans-serif" font-size="14">Academic Cycle: 2024 &ndash; 2026 &bull; Live Telemetry</text>
+
+  <!-- Metric 1 -->
+  <rect x="100" y="160" width="400" height="140" rx="16" fill="url(#card-grad)" stroke="#2a364f" stroke-width="1.5"/>
+  <text x="135" y="200" fill="#94a3b8" font-family="'Segoe UI', Inter, sans-serif" font-size="15" font-weight="600">TOTAL ACTIVE ENROLLMENT</text>
+  <text x="135" y="255" fill="#ffffff" font-family="'Segoe UI', Inter, sans-serif" font-size="38" font-weight="800">18,450</text>
+  <rect x="350" y="225" width="120" height="32" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+  <text x="375" y="246" fill="#34d399" font-family="'Segoe UI', Inter, sans-serif" font-size="13" font-weight="700">+14.8% YoY</text>
+
+  <!-- Metric 2 -->
+  <rect x="540" y="160" width="400" height="140" rx="16" fill="url(#card-grad)" stroke="#2a364f" stroke-width="1.5"/>
+  <text x="575" y="200" fill="#94a3b8" font-family="'Segoe UI', Inter, sans-serif" font-size="15" font-weight="600">RETENTION RATE</text>
+  <text x="575" y="255" fill="#ff922b" font-family="'Segoe UI', Inter, sans-serif" font-size="38" font-weight="800">93.6%</text>
+  <rect x="790" y="225" width="120" height="32" rx="16" fill="#ff922b" fill-opacity="0.15" stroke="#ff922b" stroke-width="1"/>
+  <text x="815" y="246" fill="#ffaa40" font-family="'Segoe UI', Inter, sans-serif" font-size="13" font-weight="700">+3.2% vs target</text>
+
+  <!-- Metric 3 -->
+  <rect x="980" y="160" width="400" height="140" rx="16" fill="url(#card-grad)" stroke="#2a364f" stroke-width="1.5"/>
+  <text x="1015" y="200" fill="#94a3b8" font-family="'Segoe UI', Inter, sans-serif" font-size="15" font-weight="600">COURSE COMPLETION</text>
+  <text x="1015" y="255" fill="#ffffff" font-family="'Segoe UI', Inter, sans-serif" font-size="38" font-weight="800">88.4%</text>
+  <rect x="1230" y="225" width="120" height="32" rx="16" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1"/>
+  <text x="1252" y="246" fill="#38bdf8" font-family="'Segoe UI', Inter, sans-serif" font-size="13" font-weight="700">98% On-time</text>
+
+  <!-- Metric 4 -->
+  <rect x="1420" y="160" width="400" height="140" rx="16" fill="url(#card-grad)" stroke="#2a364f" stroke-width="1.5"/>
+  <text x="1455" y="200" fill="#94a3b8" font-family="'Segoe UI', Inter, sans-serif" font-size="15" font-weight="600">APPLICATION INTAKE</text>
+  <text x="1455" y="255" fill="#ffffff" font-family="'Segoe UI', Inter, sans-serif" font-size="38" font-weight="800">32,190</text>
+  <rect x="1670" y="225" width="120" height="32" rx="16" fill="#a855f7" fill-opacity="0.15" stroke="#a855f7" stroke-width="1"/>
+  <text x="1692" y="246" fill="#c084fc" font-family="'Segoe UI', Inter, sans-serif" font-size="13" font-weight="700">+19% Record</text>
+
+  <!-- Large Area Chart Card -->
+  <rect x="100" y="330" width="1080" height="690" rx="20" fill="url(#card-grad)" stroke="#2a364f" stroke-width="1.5"/>
+  <text x="140" y="385" fill="#ffffff" font-family="'Segoe UI', Inter, sans-serif" font-size="20" font-weight="700">Enrollment Trend &amp; Growth Trajectory (5-Year Cycle)</text>
+  <text x="140" y="415" fill="#94a3b8" font-family="'Segoe UI', Inter, sans-serif" font-size="14">Interactive trend analytics with rolling averages</text>
+
+  <!-- Chart axes -->
+  <g stroke="#222e44" stroke-width="1.5">
+    <line x1="140" y1="470" x2="1120" y2="470" stroke-dasharray="4 4"/>
+    <line x1="140" y1="570" x2="1120" y2="570" stroke-dasharray="4 4"/>
+    <line x1="140" y1="670" x2="1120" y2="670" stroke-dasharray="4 4"/>
+    <line x1="140" y1="770" x2="1120" y2="770" stroke-dasharray="4 4"/>
+    <line x1="140" y1="870" x2="1120" y2="870"/>
+  </g>
+
+  <!-- Area Fill -->
+  <path d="M180 820 C 300 750, 420 780, 550 680 C 680 580, 800 620, 930 520 C 1020 440, 1070 420, 1100 400 L 1100 870 L 180 870 Z" fill="url(#area-grad)"/>
+  <!-- Stroke Line -->
+  <path d="M180 820 C 300 750, 420 780, 550 680 C 680 580, 800 620, 930 520 C 1020 440, 1070 420, 1100 400" fill="none" stroke="url(#orange-glow)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M180 820 C 300 750, 420 780, 550 680 C 680 580, 800 620, 930 520 C 1020 440, 1070 420, 1100 400" fill="none" stroke="#ff922b" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Data points -->
+  <circle cx="180" cy="820" r="6" fill="#ffffff" stroke="#ff7a00" stroke-width="3"/>
+  <circle cx="550" cy="680" r="6" fill="#ffffff" stroke="#ff7a00" stroke-width="3"/>
+  <circle cx="930" cy="520" r="6" fill="#ffffff" stroke="#ff7a00" stroke-width="3"/>
+  <circle cx="1100" cy="400" r="7" fill="#ffffff" stroke="#ff7a00" stroke-width="4"/>
+
+  <!-- Tooltip on peak -->
+  <rect x="1010" y="335" width="130" height="50" rx="8" fill="#1e293b" stroke="#ff922b" stroke-width="1.5"/>
+  <text x="1030" y="358" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">18,450</text>
+  <text x="1030" y="376" fill="#ff922b" font-family="'Segoe UI', sans-serif" font-size="11">2025/26 Peak</text>
+
+  <!-- Department breakdown card -->
+  <rect x="1220" y="330" width="600" height="330" rx="20" fill="url(#card-grad)" stroke="#2a364f" stroke-width="1.5"/>
+  <text x="1255" y="380" fill="#ffffff" font-family="'Segoe UI', Inter, sans-serif" font-size="18" font-weight="700">Intake by Department</text>
+
+  <g transform="translate(1255, 410)">
+    <text x="0" y="20" fill="#cbd5e1" font-size="13" font-family="sans-serif">Computer Applications &amp; IT</text>
+    <rect x="0" y="30" width="520" height="12" rx="6" fill="#1e293b"/>
+    <rect x="0" y="30" width="460" height="12" rx="6" fill="#ff7a00"/>
+    <text x="480" y="41" fill="#ffaa40" font-size="12" font-weight="700">88%</text>
+
+    <text x="0" y="80" fill="#cbd5e1" font-size="13" font-family="sans-serif">Business Administration</text>
+    <rect x="0" y="90" width="520" height="12" rx="6" fill="#1e293b"/>
+    <rect x="0" y="90" width="380" height="12" rx="6" fill="#f59e0b"/>
+    <text x="400" y="101" fill="#fbbf24" font-size="12" font-weight="700">73%</text>
+
+    <text x="0" y="140" fill="#cbd5e1" font-size="13" font-family="sans-serif">Data Science &amp; AI</text>
+    <rect x="0" y="150" width="520" height="12" rx="6" fill="#1e293b"/>
+    <rect x="0" y="150" width="490" height="12" rx="6" fill="#38bdf8"/>
+    <text x="500" y="161" fill="#38bdf8" font-size="12" font-weight="700">94%</text>
+
+    <text x="0" y="200" fill="#cbd5e1" font-size="13" font-family="sans-serif">Engineering Disciplines</text>
+    <rect x="0" y="210" width="520" height="12" rx="6" fill="#1e293b"/>
+    <rect x="0" y="210" width="340" height="12" rx="6" fill="#a855f7"/>
+    <text x="360" y="221" fill="#c084fc" font-size="12" font-weight="700">65%</text>
+  </g>
+
+  <!-- Regional distribution card -->
+  <rect x="1220" y="690" width="600" height="330" rx="20" fill="url(#card-grad)" stroke="#2a364f" stroke-width="1.5"/>
+  <text x="1255" y="740" fill="#ffffff" font-family="'Segoe UI', Inter, sans-serif" font-size="18" font-weight="700">Demographic Distribution</text>
+  
+  <g transform="translate(1380, 860)">
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#1e293b" stroke-width="26"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#ff7a00" stroke-width="26" stroke-dasharray="310 500" stroke-dashoffset="50" transform="rotate(-90)"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#38bdf8" stroke-width="26" stroke-dasharray="140 500" stroke-dashoffset="-260" transform="rotate(-90)"/>
+    <text x="0" y="8" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="sans-serif">62%</text>
+    <text x="0" y="28" text-anchor="middle" fill="#94a3b8" font-size="12" font-family="sans-serif">Metro Zone</text>
+  </g>
+
+  <g transform="translate(1560, 800)">
+    <circle cx="10" cy="10" r="6" fill="#ff7a00"/>
+    <text x="26" y="15" fill="#cbd5e1" font-size="13" font-family="sans-serif">Metro Candidates: 62%</text>
+
+    <circle cx="10" cy="45" r="6" fill="#38bdf8"/>
+    <text x="26" y="50" fill="#cbd5e1" font-size="13" font-family="sans-serif">Outstate Region: 28%</text>
+
+    <circle cx="10" cy="80" r="6" fill="#1e293b"/>
+    <text x="26" y="85" fill="#94a3b8" font-size="13" font-family="sans-serif">International: 10%</text>
+  </g>
+</svg>
