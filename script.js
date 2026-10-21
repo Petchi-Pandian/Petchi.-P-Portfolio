@@ -423,15 +423,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnCopyEmail) {
     btnCopyEmail.addEventListener('click', () => {
-      const email = 'preamk007@gmail.com';
+      const email = 'preamkdm007@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
         if (copyEmailText) copyEmailText.textContent = 'Copied!';
-        showToast('Email address copied to clipboard: preamk007@gmail.com');
+        showToast('Email address copied to clipboard: preamkdm007@gmail.com');
         setTimeout(() => {
           if (copyEmailText) copyEmailText.textContent = 'Copy';
         }, 3000);
       }).catch(() => {
-        showToast('Please copy: preamk007@gmail.com');
+        showToast('Please copy: preamkdm007@gmail.com');
       });
     });
   }
@@ -460,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `Hi Petchi,\n\n${message}\n\n---\nSender Details:\nName: ${name}\nEmail: ${email}\nSent via Portfolio Contact Form`
       );
 
-      const mailtoUrl = `mailto:preamk007@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+      const mailtoUrl = `mailto:preamkdm007@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 
       showToast('Opening your default email client to send message...');
       window.location.href = mailtoUrl;
