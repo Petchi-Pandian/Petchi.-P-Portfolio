@@ -118,6 +118,25 @@ ${ENGLISH_ONLY}`;
    -------------------------------------------------------------------------- */
 const app = express();
 app.disable('x-powered-by');
+app.set('trust proxy', 1); // real visitor IPs behind Render/other hosts (needed for rate limiting)
+
+// Allow the GitHub Pages site to call this server's API.
+const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || 'https://petchi-pandian.github.io')
+  .split(',')
+  .map((o) => o.trim().replace(/\/$/, ''))
+  .filter(Boolean);
+
+app.use('/api', (req, res, next) => {
+  const origin = req.headers.origin;
+  if (origin && ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Vary', 'Origin');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  }
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
 app.use(express.json({ limit: '32kb' }));
 
 app.use((req, res, next) => {

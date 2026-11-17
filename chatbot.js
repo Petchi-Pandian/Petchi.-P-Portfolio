@@ -12,6 +12,13 @@
   const GREETING_KEY = 'pixel-greeted';
   const MAX_INPUT = 1000;
 
+  // GitHub Pages cannot run server.js, so there the chat talks to the API
+  // server given in <script data-api="...">. Everywhere else it uses the same site.
+  const scriptTag = document.currentScript;
+  const API_BASE = window.location.hostname.endsWith('github.io') && scriptTag && scriptTag.dataset.api
+    ? scriptTag.dataset.api.replace(/\/$/, '')
+    : '';
+
   const WELCOME =
     "Hi there! 👋 I'm **Pixel**, Petchi's AI assistant. Ask me anything about Petchi's skills, projects, experience or certifications.";
 
@@ -253,7 +260,7 @@
     speakRequest = new AbortController();
 
     try {
-      const res = await fetch('/api/tts', {
+      const res = await fetch(`${API_BASE}/api/tts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text }),
@@ -262,7 +269,7 @@
       if (!res.ok) throw new Error(String(res.status));
       const { url } = await res.json();
       if (token !== speakToken) return;
-      audio.src = url;
+      audio.src = API_BASE + url;
       await audio.play();
     } catch (err) {
       if (token !== speakToken || err.name === 'AbortError') return;
@@ -310,7 +317,8 @@
     row.appendChild(btn);
   }
 
-  fetch('/api/config')
+  // Also wakes a sleeping free-tier server early, before the first question.
+  fetch(`${API_BASE}/api/config`)
     .then((r) => (r.ok ? r.json() : {}))
     .then((cfg) => {
       voiceAvailable = Boolean(cfg.voice);
@@ -418,7 +426,7 @@
     activeRequest = new AbortController();
 
     try {
-      const res = await fetch('/api/chat', {
+      const res = await fetch(`${API_BASE}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: history.slice(-12) }),

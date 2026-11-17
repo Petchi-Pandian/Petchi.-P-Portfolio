@@ -82,7 +82,14 @@ npm start
 ```
 Visit `http://localhost:3000`. `.env` is git-ignored - never commit it. Set `AI_PROVIDER` to `gemini` (default, model `GEMINI_MODEL=gemini-3.5-flash-lite`) or `openai` (`OPENAI_MODEL=gpt-4o-mini`).
 
-> GitHub Pages and other static hosts cannot run `server.js`, so the chat needs a Node host such as Render, Railway or Azure App Service (set `AI_PROVIDER` and `GEMINI_API_KEY` in the host's environment settings).
+### Deploy: GitHub Pages (website) + Render (AI server)
+GitHub Pages cannot run `server.js` or hold secret keys, so the AI server runs on Render and the Pages site calls it.
+
+1. Sign in at [render.com](https://render.com) with GitHub → **New** → **Blueprint** → pick this repo. Render reads `render.yaml`.
+2. When asked, paste `GEMINI_API_KEY` and `ELEVENLABS_API_KEY`. They are stored privately on Render, never in the repo.
+3. Once deployed, check that the service URL matches `data-api` on the `chatbot.js` script tag in `index.html` (`https://petchi-portfolio-ai.onrender.com`). If Render gave a different URL, update `data-api` and push.
+
+Free Render services sleep when idle; the first question after a quiet period can take up to a minute while the server wakes.
 
 ## 🚀 How to Run Locally (static only, no assistant)
 

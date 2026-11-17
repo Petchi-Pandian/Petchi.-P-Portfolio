@@ -1,0 +1,26 @@
+# Render Blueprint - runs server.js (AI chat + voice) as a free web service.
+# Secret keys are NOT stored here: "sync: false" makes Render ask for them
+# privately in its dashboard when the Blueprint is created.
+services:
+  - type: web
+    name: petchi-portfolio-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/config
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash-lite
+      - key: ELEVENLABS_VOICE_ID
+        value: onwK4e9ZLuTAKqWW03F9
+      - key: ELEVENLABS_MODEL
+        value: eleven_flash_v2_5
+      - key: ALLOWED_ORIGINS
+        value: https://petchi-pandian.github.io
