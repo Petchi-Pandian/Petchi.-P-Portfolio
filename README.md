@@ -66,7 +66,25 @@ Portfolio/
 
 ---
 
-## 🚀 How to Run Locally
+## 🤖 AI Assistant ("Pixel")
+
+A floating 3D robot (Three.js) opens a responsive chat that answers questions about Petchi in English, using the content of this portfolio. Answers are shown as text and read aloud in a professional male voice (ElevenLabs), with a Stop voice button, a voice on/off toggle and a Listen button on each answer.
+
+- `server.js` serves the site and proxies `/api/chat` to Google Gemini (or OpenAI) and `/api/tts` to ElevenLabs, so no API key ever reaches the browser. Only replies the assistant generated can be spoken.
+- `chatbot.js` / `chatbot.css` contain the robot and the chat UI.
+- The assistant's knowledge is built from `index.html` and the project data in `script.js` at startup - restart the server after editing them.
+
+### Run with the assistant
+```bash
+npm install
+cp .env.example .env     # then put your Gemini key in .env
+npm start
+```
+Visit `http://localhost:3000`. `.env` is git-ignored - never commit it. Set `AI_PROVIDER` to `gemini` (default, model `GEMINI_MODEL=gemini-3.5-flash-lite`) or `openai` (`OPENAI_MODEL=gpt-4o-mini`).
+
+> GitHub Pages and other static hosts cannot run `server.js`, so the chat needs a Node host such as Render, Railway or Azure App Service (set `AI_PROVIDER` and `GEMINI_API_KEY` in the host's environment settings).
+
+## 🚀 How to Run Locally (static only, no assistant)
 
 Because the website uses standard web standards (HTML/CSS/JS), you can open it in any modern browser:
 
