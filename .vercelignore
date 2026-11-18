@@ -1,0 +1,10 @@
+# Vercel serves only the static site. The AI chat server (server.js) runs on Render.
+.env
+.env.*
+node_modules
+server.js
+render.yaml
+package.json
+package-lock.json
+README.md
+WhatsApp Image*

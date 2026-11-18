@@ -12,10 +12,12 @@
   const GREETING_KEY = 'pixel-greeted';
   const MAX_INPUT = 1000;
 
-  // GitHub Pages cannot run server.js, so there the chat talks to the API
-  // server given in <script data-api="...">. Everywhere else it uses the same site.
+  // Static hosts (GitHub Pages, Vercel) cannot run server.js, so the chat talks to
+  // the API server given in <script data-api="...">. When running server.js locally
+  // (localhost), it uses the same site.
   const scriptTag = document.currentScript;
-  const API_BASE = window.location.hostname.endsWith('github.io') && scriptTag && scriptTag.dataset.api
+  const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  const API_BASE = !isLocal && scriptTag && scriptTag.dataset.api
     ? scriptTag.dataset.api.replace(/\/$/, '')
     : '';
 
