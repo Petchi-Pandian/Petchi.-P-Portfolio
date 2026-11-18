@@ -120,8 +120,8 @@ const app = express();
 app.disable('x-powered-by');
 app.set('trust proxy', 1); // real visitor IPs behind Render/other hosts (needed for rate limiting)
 
-// Allow the GitHub Pages site to call this server's API.
-const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || 'https://petchi-pandian.github.io')
+// Allow the GitHub Pages and Vercel sites to call this server's API.
+const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || 'https://petchi-pandian.github.io,https://petchi-p-portfolio.vercel.app')
   .split(',')
   .map((o) => o.trim().replace(/\/$/, ''))
   .filter(Boolean);
